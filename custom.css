@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   line-height: 1.05;
   text-shadow: 0 4px 48px rgba(0, 0, 0, 0.45);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .lm-hero-sub {
@@ -384,16 +384,16 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--lm-magenta), 0 6px 24px rgba(0,0,0,0.12);
 }
 
-/* tall: row 1 col 1, spans 2 rows */
+/* tall left: col 1, spans rows 1-2 */
 .lm-gi-tall {
   grid-column: 1;
   grid-row: 1 / 3;
 }
 
-/* wide: row 2 cols 2-3 */
-.lm-gi-wide {
-  grid-column: 2 / 4;
-  grid-row: 2;
+/* tall right: col 3, spans rows 1-2 */
+.lm-gi-tall-r {
+  grid-column: 3;
+  grid-row: 1 / 3;
 }
 
 .lm-gallery-item img {
@@ -577,6 +577,253 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--lm-muted);
   font-size: 0.97rem;
 }
+
+/* ── GALLERY CONTAIN VARIANT ─────────────────────────────── */
+.lm-gallery-item--contain {
+  background: #1a1a2e;
+}
+
+.lm-gallery-item--contain img {
+  object-fit: contain;
+}
+
+
+/* ── EMAIL TOGGLE BUTTON ─────────────────────────────────── */
+.lm-email-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.lm-et-btn {
+  background: rgba(233, 30, 140, 0.09);
+  border: 1.5px solid var(--lm-magenta);
+  color: var(--lm-magenta);
+  border-radius: 50px;
+  padding: 0.22rem 0.9rem;
+  font-size: 0.82rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.lm-et-btn:hover {
+  background: var(--lm-magenta);
+  color: #fff;
+}
+
+.lm-et-btn--dark {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+
+.lm-et-btn--dark:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+}
+
+.lm-et-btn--footer {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--lm-teal);
+  color: var(--lm-teal);
+}
+
+.lm-et-btn--footer:hover {
+  background: var(--lm-teal);
+  color: #fff;
+}
+
+
+/* ── COMMISSION SUCCESS PANEL ────────────────────────────── */
+.lm-cs-panel { text-align: center; padding: 0.5rem 0; }
+
+.lm-cs-instr {
+  font-size: 0.92rem;
+  color: var(--lm-muted);
+  max-width: 380px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.5;
+}
+
+.lm-cs-to-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.lm-cs-to-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--lm-text);
+}
+
+.lm-cs-email-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lm-cs-email-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--lm-magenta);
+}
+
+.lm-cs-copy-btn {
+  background: var(--lm-magenta);
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lm-cs-copy-btn:hover { filter: brightness(1.12); }
+.lm-cs-copy-btn.lm-copied { background: var(--lm-emerald); }
+
+.lm-cs-msg-wrap {
+  text-align: left;
+}
+
+.lm-cs-msg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.lm-cs-msg-label {
+  font-weight: 700;
+  font-size: 0.83rem;
+  color: var(--lm-text);
+}
+
+.lm-cs-copy-msg {
+  background: linear-gradient(135deg, var(--lm-magenta), var(--lm-purple));
+  border: none;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.28rem 0.9rem;
+  font-size: 0.75rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lm-cs-copy-msg:hover { filter: brightness(1.1); }
+.lm-cs-copy-msg.lm-copied { background: var(--lm-emerald); }
+
+.lm-cs-pre {
+  background: #f5f0ff;
+  border: 1.5px solid #e0d4f7;
+  border-radius: 12px;
+  padding: 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.83rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--lm-text);
+  max-height: 180px;
+  overflow-y: auto;
+  margin: 0;
+  text-align: left;
+}
+
+.lm-cs-alt {
+  font-size: 0.82rem;
+  color: var(--lm-muted);
+}
+
+
+/* ── INQUIRE POPUP ───────────────────────────────────────── */
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.lm-email-pop {
+  background: #fff;
+  border: 2px solid var(--lm-magenta);
+  border-radius: 16px;
+  padding: 1rem 1.25rem 0.85rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(233, 30, 140, 0.18);
+  animation: popIn 0.2s ease;
+}
+
+.lm-ep-label {
+  font-size: 0.78rem;
+  color: var(--lm-muted);
+  margin-bottom: 0.45rem;
+  line-height: 1.4;
+}
+
+.lm-ep-email {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--lm-magenta);
+  text-decoration: none;
+  word-break: break-all;
+  margin-bottom: 0.85rem;
+  transition: color 0.2s;
+}
+
+.lm-ep-email:hover { color: var(--lm-purple); text-decoration: underline; }
+
+.lm-ep-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.lm-ep-copy,
+.lm-ep-close {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 50px;
+  padding: 0.32rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lm-ep-copy {
+  background: linear-gradient(135deg, var(--lm-magenta), var(--lm-purple));
+  color: #fff;
+}
+
+.lm-ep-copy:hover { filter: brightness(1.1); }
+
+.lm-ep-copy.lm-copied {
+  background: var(--lm-emerald);
+}
+
+.lm-ep-close {
+  background: #ede8f5;
+  color: var(--lm-muted);
+}
+
+.lm-ep-close:hover { background: #ddd6ee; }
 
 
 /* ── COMMISSION SECTION ──────────────────────────────────── */
@@ -825,8 +1072,8 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-rows: 240px 240px 240px 240px;
   }
 
-  .lm-gi-tall  { grid-column: 1; grid-row: 1 / 3; }
-  .lm-gi-wide  { grid-column: 1 / 3; grid-row: 3; }
+  .lm-gi-tall   { grid-column: 1; grid-row: 1 / 3; }
+  .lm-gi-tall-r { grid-column: 2; grid-row: 1 / 3; }
 
   .lm-commission-section { padding: 7rem 0 5rem; }
   .lm-form-card { padding: 2rem; }
@@ -840,7 +1087,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .lm-gi-tall,
-  .lm-gi-wide { grid-column: 1; grid-row: auto; }
+  .lm-gi-tall-r { grid-column: 1; grid-row: auto; }
 
   .lm-footer-links { justify-content: flex-start; }
   .lm-section         { padding: 4rem 0; }
