@@ -1,12 +1,12 @@
-# Lynnea Molone Art
+# BrushStroke Revival
 
-Static portfolio and commission website for artist **Lynnea Molone** — murals, canvas paintings, staining, mailbox art, realism, and abstract. Built to showcase her work and accept custom project inquiries via email.
+Static portfolio and commission website for **BrushStroke Revival** — murals, canvas paintings, staining, mailbox art, realism, and abstract. Built to showcase the work and accept custom project inquiries via email.
 
 ---
 
 ## Live Site
 
-Deployed via GitHub Pages. Update `CNAME` with Lynnea's domain before publishing (currently contains a placeholder from a prior project).
+Deployed via GitHub Pages. Update `CNAME` with the BrushStroke Revival domain before publishing (currently contains a placeholder from a prior project).
 
 ---
 
@@ -139,7 +139,7 @@ The form is at the bottom of `index.html` inside `<section id="commission">`. Wh
 
 ## Deployment
 
-1. Update `CNAME` with Lynnea's custom domain (e.g. `lynneamoloneart.com`)
+1. Update `CNAME` with the BrushStroke Revival custom domain (e.g. `brushstrokerevival.com`)
 2. Push to the `main` branch
 3. In the GitHub repo settings → Pages → set source to `main` branch, root `/`
 4. GitHub Pages will serve the site at the custom domain within a few minutes
